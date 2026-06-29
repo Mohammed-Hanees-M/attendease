@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium py-2.5 px-5 rounded-lg transition-all duration-150;
+  }
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-150;
+  }
+  .btn-success {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-150;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6;
+  }
+  .input-field {
+    @apply w-full border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+  .badge-present {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800;
+  }
+  .badge-late {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800;
+  }
+  .badge-pending {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+  }
+  .badge-approved {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800;
+  }
+  .badge-rejected {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800;
+  }
+}
